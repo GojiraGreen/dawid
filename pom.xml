@@ -15,6 +15,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>${jaxb.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -36,12 +41,15 @@
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jaxb.version>2.2.11</jaxb.version>
         <junit.version>3.8.1</junit.version>
         <compiler.pluglin.version>3.6.1</compiler.pluglin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
