@@ -1,15 +1,12 @@
 package library.parsers;
-import library.entity.Book;
 import library.entity.LibraryBook;
-
-import java.time.LocalDate;
 
 /**
  * @author azielinski1
  */
 public class InputParser {
-    public static Book parseBook(String[] selection) {
-        Book book = new LibraryBook();
+    public static LibraryBook parseBook(String[] selection) {
+        LibraryBook book = new LibraryBook();
         book.setId(System.currentTimeMillis());
         book.setAuthor(selection[1]);
         book.setTitle(selection[2]);

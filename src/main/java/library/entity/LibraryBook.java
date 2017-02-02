@@ -3,7 +3,7 @@ package library.entity;
 /**
  * @author azielinski1
  */
-public class LibraryBook implements Book {
+public class LibraryBook {
 
     private long id;
     private String author;
@@ -12,12 +12,10 @@ public class LibraryBook implements Book {
     private String category;
     private String remarks;
 
-    @Override
     public long getId() {
-        return 0;
+        return id;
     }
 
-    @Override
     public void setId(long id) {
         this.id = id;
     }
@@ -62,7 +60,6 @@ public class LibraryBook implements Book {
         this.remarks = remarks;
     }
 
-    @Override
     public String printBook() {
         return null;
     }

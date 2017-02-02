@@ -41,6 +41,7 @@ public class ConsoleAppSetup implements Console{
                     libraryBookService.saveBook(InputParser.parseBook(selection));
                     break;
                 case Commands.DELETE:
+                    libraryBookService.deleteBook(Long.parseLong(selection[1]));
                     break;
                 case Commands.LIST:
                     break;
@@ -49,6 +50,7 @@ public class ConsoleAppSetup implements Console{
                 case Commands.LIST_SORT:
                     break;
                 case Commands.READ:
+                    libraryBookService.readBooksFromFile(selection[1]);
                     break;
                 case Commands.WRITE:
                     libraryBookService.writeBooksToFile(selection[1]);

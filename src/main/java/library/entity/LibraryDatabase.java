@@ -1,20 +1,19 @@
 package library.entity;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author azielinski1
  */
-@XmlRootElement
+@XmlRootElement(name="books")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LibraryDatabase implements Database{
 
-    @XmlElementWrapper(name="books")
+//    @XmlElementWrapper(name="books")
     @XmlElement(name="book")
-    List<Book> books;
+    List<LibraryBook> books;
 
     private static LibraryDatabase instance = null;
 
@@ -29,17 +28,18 @@ public class LibraryDatabase implements Database{
     }
 
     @Override
-    public List<Book> getBooks() {
+    public List<LibraryBook> getBooks() {
         return null;
     }
 
     @Override
-    public void setBooks(List<Book> records) {
-
+    public void removeBook(long id) {
+        this.books.remove(this.books.stream().filter(b -> b.getId() == id).findFirst());
     }
 
+
     @Override
-    public void addBook(Book book) {
+    public void addBook(LibraryBook book) {
         this.books.add(book);
     }
 }
