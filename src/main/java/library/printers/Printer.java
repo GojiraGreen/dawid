@@ -9,14 +9,14 @@ import java.util.List;
  * Created by Aron on 2017-02-03.
  */
 public interface Printer {
-    static String printBook(LibraryBook book){
-        return "book: " +
+    static void printBook(LibraryBook book){
+        System.out.println("book: " +
                 book.getId() + ";" +
                 book.getAuthor() + ";" +
                 book.getTitle() + ";" +
                 book.getCategory() + ";" +
                 book.getLocalization() + ";" +
-                book.getRemarks() + ";";
+                book.getRemarks() + ";");
     }
 
     static void printBookList(List<LibraryBook> books){}

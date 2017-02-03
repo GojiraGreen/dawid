@@ -1,7 +1,6 @@
 package library.printers;
 
 import library.entity.LibraryBook;
-import library.enums.Commands;
 
 import java.util.List;
 
@@ -13,4 +12,6 @@ public class LibraryPrinter implements Printer {
     public static void printBookList(List<LibraryBook> books) {
         books.stream().forEach(Printer::printBook);
     }
+
+
 }

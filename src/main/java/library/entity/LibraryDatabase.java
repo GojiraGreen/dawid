@@ -29,7 +29,7 @@ public class LibraryDatabase implements Database{
 
     @Override
     public List<LibraryBook> getBooks() {
-        return null;
+        return books;
     }
 
     @Override

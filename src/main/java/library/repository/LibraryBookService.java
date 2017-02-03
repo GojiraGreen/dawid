@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Dawid Wąs
@@ -75,22 +76,24 @@ public class LibraryBookService implements BookService {
      * @param columns
      */
     public void printFilteredBooks(String[] columns) {
-        List<LibraryBook> filteredBooks = new ArrayList<>();
+        List<LibraryBook> filteredBooks = this.database.getBooks();
 
-        if (columns.length == 2) {
-            filteredBooks = (List<LibraryBook>) filteredBooks.stream().filter(b -> b.getAuthor() == columns[1]);
+        if (columns.length >= 2 && !columns[1].equals("")) {
+            filteredBooks =  filteredBooks.stream().filter(
+                    b -> b.getAuthor().equals(columns[1])
+            ).collect(Collectors.toList());
         }
 
-        if (columns.length == 3) {
-            filteredBooks = (List<LibraryBook>) filteredBooks.stream().filter(b -> b.getTitle() == columns[2]);
+        if (columns.length >= 3 && !columns[2].equals("")) {
+            filteredBooks = filteredBooks.stream().filter(b -> b.getTitle().equals(columns[2])).collect(Collectors.toList());
         }
 
-        if (columns.length == 4) {
-            filteredBooks = (List<LibraryBook>) filteredBooks.stream().filter(b -> b.getLocalization() == columns[3]);
+        if (columns.length >= 4 && !columns[3].equals("")) {
+            filteredBooks = filteredBooks.stream().filter(b -> b.getLocalization().equals(columns[3])).collect(Collectors.toList());
         }
 
-        if (columns.length == 5) {
-            filteredBooks = (List<LibraryBook>) filteredBooks.stream().filter(b -> b.getCategory() == columns[4]);
+        if (columns.length == 5 && !columns[4].equals("")) {
+            filteredBooks = filteredBooks.stream().filter(b -> b.getCategory().equals(columns[4])).collect(Collectors.toList());
         }
 
         LibraryPrinter.printBookList(filteredBooks);
