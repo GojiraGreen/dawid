@@ -1,6 +1,6 @@
+library\printers\Printer.class
 library\console\Console.class
 library\parsers\InputParser.class
-library\entity\Book.class
 library\entity\LibraryDatabase.class
 library\searchers\BookSearcher.class
 library\enums\Columns.class
@@ -9,5 +9,6 @@ library\console\ConsoleAppSetup.class
 library\entity\Database.class
 library\enums\Commands.class
 library\repository\LibraryBookService.class
+library\printers\LibraryPrinter.class
 library\Main.class
 library\entity\LibraryBook.class

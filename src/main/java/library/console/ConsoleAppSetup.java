@@ -6,10 +6,12 @@ import library.repository.LibraryBookService;
 
 import java.util.Scanner;
 
+import static library.printers.Printer.*;
+
 /**
  * @author azielinski1
  */
-public class ConsoleAppSetup implements Console{
+public class ConsoleAppSetup implements Console {
 
     public static void setupApplication() {
 
@@ -21,7 +23,7 @@ public class ConsoleAppSetup implements Console{
         // kontrola sesji konsoli
         boolean session = true;
 
-        System.out.print("\nWitaj w bibiotece:\n\n");
+        printWelcome();
 
         while (session) {
 
@@ -44,10 +46,13 @@ public class ConsoleAppSetup implements Console{
                     libraryBookService.deleteBook(Long.parseLong(selection[1]));
                     break;
                 case Commands.LIST:
+                    libraryBookService.printBooks();
                     break;
                 case Commands.LIST_FILTER:
+                    libraryBookService.printFilteredBooks(selection);
                     break;
                 case Commands.LIST_SORT:
+                    libraryBookService.sortBooks(selection[1]);
                     break;
                 case Commands.READ:
                     libraryBookService.readBooksFromFile(selection[1]);
@@ -63,27 +68,6 @@ public class ConsoleAppSetup implements Console{
             }
 
         }
-
-        System.out.println("\nThank you for using our application!\n");
-    }
-
-    private static void printMenu() {
-        System.out.print("Dodanie książki\n"
-                + Commands.ADD + ";<autor>;<tytuł>;<lokalizacja>;<kategoria>;<uwagi>\n\n"
-                + "Usunięcie książki\n"
-                + Commands.DELETE + ";<id>\n\n"
-                + "Lista książek\n"
-                + Commands.LIST + "L\n\n"
-                + "Lista książek po zastosowaniu filtra\n"
-                + Commands.LIST_FILTER + ";[<autor>];[<tytuł>];[<lok>];[<kat>]\n\n"
-                + "Lista książek sortowana po kolumnie:\n"
-                + Commands.LIST_SORT + ";<kolumna>\n\n"
-                + "Zapis do pliku xlsx?\n"
-                + Commands.WRITE + ";<ścieżka do pliku>\n\n"
-                + "Odczyt z pliku xml.\n"
-                + Commands.READ + ";<ścieżka do pliku>\n\n"
-                + "Zakończenie pracy\n"
-                + "QUIT"
-                + "Wprowadz polecenie: \n\n");
+        printGoodBye();
     }
 }

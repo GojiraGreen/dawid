@@ -1,6 +1,7 @@
 C:\Users\Aron\workspace\dawid\src\main\java\library\enums\Commands.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\enums\Columns.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\parsers\InputParser.java
+C:\Users\Aron\workspace\dawid\src\main\java\library\printers\LibraryPrinter.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\repository\BookService.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\repository\LibraryBookService.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\console\Console.java
@@ -8,6 +9,6 @@ C:\Users\Aron\workspace\dawid\src\main\java\library\Main.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\entity\Database.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\entity\LibraryBook.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\entity\LibraryDatabase.java
-C:\Users\Aron\workspace\dawid\src\main\java\library\entity\Book.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\console\ConsoleAppSetup.java
 C:\Users\Aron\workspace\dawid\src\main\java\library\searchers\BookSearcher.java
+C:\Users\Aron\workspace\dawid\src\main\java\library\printers\Printer.java

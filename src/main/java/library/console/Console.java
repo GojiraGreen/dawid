@@ -6,6 +6,5 @@ package library.console;
 public interface Console {
 
     static void setupApplication(){};
-    static void printMenu(){};
 
 }

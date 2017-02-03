@@ -12,11 +12,11 @@ public interface BookService {
 
     void deleteBook(long id);
 
-    List<LibraryBook> getBooks();
-
-    void getBook(long id);
+    void printBooks();
 
     void writeBooksToFile(String path);
 
     void readBooksFromFile(String s);
+
+    void sortBooks(String s);
 }
