@@ -18,7 +18,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public class LibraryBookService implements BookService {
 

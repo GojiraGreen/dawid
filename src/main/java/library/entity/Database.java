@@ -3,7 +3,7 @@ package library.entity;
 import java.util.List;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public interface Database {
     List<LibraryBook> getBooks();

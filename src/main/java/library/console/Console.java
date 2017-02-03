@@ -1,7 +1,7 @@
 package library.console;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public interface Console {
 

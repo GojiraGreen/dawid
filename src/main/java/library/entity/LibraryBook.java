@@ -1,7 +1,7 @@
 package library.entity;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public class LibraryBook {
 

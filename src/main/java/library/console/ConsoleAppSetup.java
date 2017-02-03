@@ -9,7 +9,7 @@ import java.util.Scanner;
 import static library.printers.Printer.*;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public class ConsoleAppSetup implements Console {
 

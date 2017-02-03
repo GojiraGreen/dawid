@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 @XmlRootElement(name="books")
 @XmlAccessorType(XmlAccessType.FIELD)

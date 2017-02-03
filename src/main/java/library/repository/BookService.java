@@ -5,7 +5,7 @@ import library.entity.LibraryBook;
 import java.util.List;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public interface BookService {
     void saveBook(LibraryBook book);

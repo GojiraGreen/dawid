@@ -1,7 +1,7 @@
 package library.enums;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public class Commands {
 

@@ -2,7 +2,7 @@ package library.parsers;
 import library.entity.LibraryBook;
 
 /**
- * @author azielinski1
+ * @author Dawid Wąs
  */
 public class InputParser {
     public static LibraryBook parseBook(String[] selection) {
